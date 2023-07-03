@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpws:process exitOnStandardFault="no" name="helpers.salesforce.create"
+<bpws:process exitOnStandardFault="no" name="helpers.salesforce.Create"
     suppressJoinFailure="yes"
     targetNamespace="http://xmlns.example.com/20230703150345"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
