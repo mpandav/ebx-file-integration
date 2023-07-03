@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/jira-service.create-record-create-record.json",
+        "type": "generated"
+    }]
+}

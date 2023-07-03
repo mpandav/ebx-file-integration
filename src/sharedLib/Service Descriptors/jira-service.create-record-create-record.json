@@ -1,0 +1,146 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "create-record",
+    "description" : "create-record service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/v1/create-record" : {
+      "post" : {
+        "summary" : "postCreate-record",
+        "description" : "postCreate-record",
+        "operationId" : "post-v1-create-record",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "202" : {
+            "description" : "Accepted",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "204" : {
+            "description" : "No Content",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "301" : {
+            "description" : "Moved Permanently",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "303" : {
+            "description" : "See Other",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "304" : {
+            "description" : "Not Modified",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "307" : {
+            "description" : "Temporary Redirect",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "403" : {
+            "description" : "Forbidden",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "406" : {
+            "description" : "Not Acceptable",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "409" : {
+            "description" : "Conflict",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "410" : {
+            "description" : "Gone",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "412" : {
+            "description" : "Precondition Failed",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "415" : {
+            "description" : "Unsupported Media Type",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "200" : {
+            "description" : "OK",
+            "headers" : { }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

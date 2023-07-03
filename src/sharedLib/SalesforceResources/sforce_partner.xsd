@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is automatically produced for internal use, please don't modify it!--><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:partner.soap.sforce.com" xmlns:tns="urn:partner.soap.sforce.com" xmlns:ens="urn:sobject.partner.soap.sforce.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<import namespace="urn:sobject.partner.soap.sforce.com" schemaLocation="Salesforce_Metadata.xsd"/>
+	<complexType name="TIBQueryResultTIB">
+		<sequence>
+			<element name="done" type="xsd:boolean"/>
+			<element name="queryLocator" type="tns:QueryLocator" nillable="true"/>
+			<element name="records" type="ens:sObject" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="size" type="xsd:int"/>
+		</sequence>
+	</complexType>
+	<simpleType name="QueryLocator">
+		<restriction base="xsd:string"/>
+	</simpleType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="SearchLayoutField">
+                <sequence>
+                    <element name="apiName" type="xsd:string"/>
+                    <element name="label" type="xsd:string"/>
+                    <element name="sortable" type="xsd:boolean"/>
+                </sequence>
+           </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="address">
+                <complexContent>
+                    <extension base="tns:location">
+                        <sequence>
+                            <element name="city" nillable="true" type="xsd:string"/>
+                            <element name="country" nillable="true" type="xsd:string"/>
+                            <element name="countryCode" nillable="true" type="xsd:string"/>
+                            <element name="geocodeAccuracy" nillable="true" type="xsd:string"/>
+                            <element name="postalCode" nillable="true" type="xsd:string"/>
+                            <element name="state" nillable="true" type="xsd:string"/>
+                            <element name="stateCode" nillable="true" type="xsd:string"/>
+                            <element name="street" nillable="true" type="xsd:string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="StringList">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="values" type="xsd:string"/>
+                </sequence>
+            </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="SearchLayoutButton">
+                <sequence>
+                    <element name="apiName" type="xsd:string"/>
+                    <element name="label" type="xsd:string"/>
+                </sequence>
+           </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="RecordTypesSupported">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="recordTypeInfos" type="tns:RecordTypeInfo"/>
+                </sequence>
+            </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="RecordTypeInfo">
+                <sequence>
+
+                    <element name="active" type="xsd:boolean"/>
+
+                    <element name="available" type="xsd:boolean"/>
+                    <element name="defaultRecordTypeMapping" type="xsd:boolean"/>
+
+                    <element name="developerName" type="xsd:string"/>
+
+
+                    <element name="master" type="xsd:boolean"/>
+
+                    <element name="name" type="xsd:string"/>
+                    <element name="recordTypeId" nillable="true" type="tns:ID"/>
+                </sequence>
+            </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="SearchLayoutButtonsDisplayed">
+                <sequence>
+                    <element name="applicable" type="xsd:boolean"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="buttons" type="tns:SearchLayoutButton"/>
+                </sequence>
+           </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ChangeEventHeader">
+                <sequence>
+                    <element name="entityName" type="xsd:string"/>
+                    <element maxOccurs="unbounded" minOccurs="1" name="recordIds" type="xsd:string"/>
+                    <element name="commitTimestamp" type="xsd:long"/>
+                    <element name="commitNumber" type="xsd:long"/>
+                    <element name="commitUser" type="xsd:string"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="diffFields" type="xsd:string"/>
+                    <element name="changeType" type="tns:changeEventType"/>
+                    <element name="changeOrigin" type="xsd:string"/>
+                    <element name="transactionKey" type="xsd:string"/>
+                    <element name="sequenceNumber" type="xsd:int"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="nulledFields" type="xsd:string"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="changedFields" type="xsd:string"/>
+                </sequence>
+            </complexType>
+	<simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="changeEventType">
+                <restriction base="xsd:string">
+                    <enumeration value="CREATE"/>
+                    <enumeration value="UPDATE"/>
+                    <enumeration value="DELETE"/>
+                    <enumeration value="UNDELETE"/>
+                    <enumeration value="GAP_CREATE"/>
+                    <enumeration value="GAP_UPDATE"/>
+                    <enumeration value="GAP_DELETE"/>
+                    <enumeration value="GAP_UNDELETE"/>
+                </restriction>
+            </simpleType>
+	<simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="json">
+                <restriction base="xsd:string"/>
+            </simpleType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="location">
+                <sequence>
+                    <element name="latitude" nillable="true" type="xsd:double"/>
+                    <element name="longitude" nillable="true" type="xsd:double"/>
+                </sequence>
+            </complexType>
+	<simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ID">
+                <restriction base="xsd:string">
+                    <length value="18"/>
+                    <pattern value="[a-zA-Z0-9]{18}"/>
+                </restriction>
+            </simpleType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="JunctionIdListNames">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="names" type="xsd:string"/>
+                </sequence>
+            </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="SearchLayoutFieldsDisplayed">
+                <sequence>
+                    <element name="applicable" type="xsd:boolean"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="fields" type="tns:SearchLayoutField"/>
+                </sequence>
+           </complexType>
+	<complexType xmlns="http://www.w3.org/2001/XMLSchema" name="RelationshipReferenceTo">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="referenceTo" type="xsd:string"/>
+                </sequence>
+            </complexType>
+	</schema>

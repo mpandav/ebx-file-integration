@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_5Bc74Bl1Ee6NHrleUrC33Q" targetNamespace="http://tns.tibco.com/bw/composite/sharedLib" name="sharedLib" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_0nyOUBm0Ee6NHrleUrC33Q" name="v1-create-record" promote="Componentcreate-record/v1-create-record">
+    <sca:interface.wsdl xmi:id="_0oGXYBm0Ee6NHrleUrC33Q" interface="http://xmlns.example.com/20230703171810PLT#wsdl.interface(v1-create-record)" scaext:wsdlLocation="../Processes/jira-service/create-record.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_0onUwBm0Ee6NHrleUrC33Q" name="RestService" path="/v1/create-record" docBasePath="http://localhost:7777/sharedLib" docResourcePath="create-record" basePath="/" connector="sharedlib.create-record" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/jira-service.create-record-create-record.json">
+      <operation xmi:id="_0opxABm0Ee6NHrleUrC33Q" operationName="post" nickname="post-v1-create-record" httpMethod="POST" notes="postCreate-record" responseStyle="element" outputPartName="item">
+        <responseStatus xmi:id="_Ny6kkBm2Ee6NHrleUrC33Q" statusCode="200" reasonPhrase="OK" dataType="string"/>
+        <responseStatus xmi:id="_N3mQQBm2Ee6NHrleUrC33Q" statusCode="201" reasonPhrase="Created" dataType="string"/>
+        <responseStatus xmi:id="_N5o3oBm2Ee6NHrleUrC33Q" statusCode="202" reasonPhrase="Accepted" dataType="string"/>
+        <responseStatus xmi:id="_N9T2sBm2Ee6NHrleUrC33Q" statusCode="204" reasonPhrase="No Content" dataType="string"/>
+        <responseStatus xmi:id="_N_NUIBm2Ee6NHrleUrC33Q" statusCode="301" reasonPhrase="Moved Permanently" dataType="string"/>
+        <responseStatus xmi:id="_OAyogBm2Ee6NHrleUrC33Q" statusCode="303" reasonPhrase="See Other" dataType="string"/>
+        <responseStatus xmi:id="_OCZyEBm2Ee6NHrleUrC33Q" statusCode="304" reasonPhrase="Not Modified" dataType="string"/>
+        <responseStatus xmi:id="_OEI3cBm2Ee6NHrleUrC33Q" statusCode="307" reasonPhrase="Temporary Redirect" dataType="string"/>
+        <responseStatus xmi:id="_OFuL0Bm2Ee6NHrleUrC33Q" statusCode="400" reasonPhrase="Bad Request" dataType="string"/>
+        <responseStatus xmi:id="_OHg7kBm2Ee6NHrleUrC33Q" statusCode="401" reasonPhrase="Unauthorized" dataType="string"/>
+        <responseStatus xmi:id="_OJOy0Bm2Ee6NHrleUrC33Q" statusCode="403" reasonPhrase="Forbidden" dataType="string"/>
+        <responseStatus xmi:id="_OK0HMBm2Ee6NHrleUrC33Q" statusCode="404" reasonPhrase="Not Found" dataType="string"/>
+        <responseStatus xmi:id="_OMaCoBm2Ee6NHrleUrC33Q" statusCode="406" reasonPhrase="Not Acceptable" dataType="string"/>
+        <responseStatus xmi:id="_ON_-EBm2Ee6NHrleUrC33Q" statusCode="409" reasonPhrase="Conflict" dataType="string"/>
+        <responseStatus xmi:id="_OPl5gBm2Ee6NHrleUrC33Q" statusCode="410" reasonPhrase="Gone" dataType="string"/>
+        <responseStatus xmi:id="_ORLN4Bm2Ee6NHrleUrC33Q" statusCode="412" reasonPhrase="Precondition Failed" dataType="string"/>
+        <responseStatus xmi:id="_OS66UBm2Ee6NHrleUrC33Q" statusCode="415" reasonPhrase="Unsupported Media Type" dataType="string"/>
+        <responseStatus xmi:id="_OXQAsBm2Ee6NHrleUrC33Q" statusCode="500" reasonPhrase="Internal Server Error" dataType="string"/>
+        <responseStatus xmi:id="_OY-fABm2Ee6NHrleUrC33Q" statusCode="503" reasonPhrase="Service Unavailable" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_0p8KcBm0Ee6NHrleUrC33Q"/>
+      <advancedConfig xmi:id="_0on70Bm0Ee6NHrleUrC33Q" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_0opxARm0Ee6NHrleUrC33Q" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_5L_X8Bl1Ee6NHrleUrC33Q" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5MPPkBl1Ee6NHrleUrC33Q" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5MWkUBl1Ee6NHrleUrC33Q" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5MXLYBl1Ee6NHrleUrC33Q" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5MZAkBl1Ee6NHrleUrC33Q" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5MZnoBl1Ee6NHrleUrC33Q" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_5Mbc0Bl1Ee6NHrleUrC33Q" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TRb8MBmJEe6NHrleUrC33Q" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_0l9HgBmiEe6NHrleUrC33Q" name="salesforce.xsd" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_1DTx4BmiEe6NHrleUrC33Q" name="metadata.xsd" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uqmE4Bm5Ee6NHrleUrC33Q" name="/SharedResources/HTTP/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_x6YaoBm5Ee6NHrleUrC33Q" name="/SharedResources/HTTP/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_0nZz0Bm0Ee6NHrleUrC33Q" name="Componentcreate-record" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_0nZz0Rm0Ee6NHrleUrC33Q" processName="jira-service.create-record"/>
+    <sca:service xmi:id="_0nodUBm0Ee6NHrleUrC33Q" name="v1-create-record">
+      <sca:interface.wsdl xmi:id="_0nvyEBm0Ee6NHrleUrC33Q" interface="http://xmlns.example.com/20230703171810PLT#wsdl.interface(v1-create-record)" scaext:wsdlLocation="../Processes/jira-service/create-record.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

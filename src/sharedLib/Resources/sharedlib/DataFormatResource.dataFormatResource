@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_3b41dbaf-88eb-45c4-baa9-e05be0395db0="http://ns.tibco.com/bw/palette/dataformat/3b41dbaf-88eb-45c4-baa9-e05be0395db0" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_PRiEABl8Ee6NHrleUrC33Q" name="sharedlib.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_FdkksBl-Ee6NHrleUrC33Q" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/3b41dbaf-88eb-45c4-baa9-e05be0395db0"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_PRluYBl8Ee6NHrleUrC33Q" formatType="Delimiter separated" colSeparator=";" colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_3b41dbaf-88eb-45c4-baa9-e05be0395db0:root" lineLength="1" fieldOffsetsStr="MDM_Id(0,0)&#xA;Name(0,0)&#xA;LegalEntityIdentifier(0,0)&#xA;MainactivitysectorCode(0,0)&#xA;ParentMDMId(0,0)&#xA;Blacklisted(0,0)&#xA;Active(0,0)&#xA;Number(0,0)&#xA;Street(0,0)&#xA;City(0,0)&#xA;ZIPCode(0,0)&#xA;Country-Alpha-2Code(0,0)&#xA;Latitude(0,0)&#xA;Longitude(0,0)&#xA;BankAccountHolder(0,0)&#xA;BankName(0,0)&#xA;IBAN(0,0)&#xA;BIC(0,0)">
+    <fieldOffsets xmi:id="_FeMPwBl-Ee6NHrleUrC33Q" name="MDM_Id"/>
+    <fieldOffsets xmi:id="_FeMPwRl-Ee6NHrleUrC33Q" name="Name"/>
+    <fieldOffsets xmi:id="_FeMPwhl-Ee6NHrleUrC33Q" name="LegalEntityIdentifier"/>
+    <fieldOffsets xmi:id="_FeMPwxl-Ee6NHrleUrC33Q" name="MainactivitysectorCode"/>
+    <fieldOffsets xmi:id="_FeMPxBl-Ee6NHrleUrC33Q" name="ParentMDMId"/>
+    <fieldOffsets xmi:id="_FeMPxRl-Ee6NHrleUrC33Q" name="Blacklisted"/>
+    <fieldOffsets xmi:id="_FeMPxhl-Ee6NHrleUrC33Q" name="Active"/>
+    <fieldOffsets xmi:id="_FeMPxxl-Ee6NHrleUrC33Q" name="Number"/>
+    <fieldOffsets xmi:id="_FeMPyBl-Ee6NHrleUrC33Q" name="Street"/>
+    <fieldOffsets xmi:id="_FeMPyRl-Ee6NHrleUrC33Q" name="City"/>
+    <fieldOffsets xmi:id="_FeMPyhl-Ee6NHrleUrC33Q" name="ZIPCode"/>
+    <fieldOffsets xmi:id="_FeMPyxl-Ee6NHrleUrC33Q" name="Country-Alpha-2Code"/>
+    <fieldOffsets xmi:id="_FeMPzBl-Ee6NHrleUrC33Q" name="Latitude"/>
+    <fieldOffsets xmi:id="_FeMPzRl-Ee6NHrleUrC33Q" name="Longitude"/>
+    <fieldOffsets xmi:id="_FeMPzhl-Ee6NHrleUrC33Q" name="BankAccountHolder"/>
+    <fieldOffsets xmi:id="_FeMPzxl-Ee6NHrleUrC33Q" name="BankName"/>
+    <fieldOffsets xmi:id="_FeMP0Bl-Ee6NHrleUrC33Q" name="IBAN"/>
+    <fieldOffsets xmi:id="_FeMP0Rl-Ee6NHrleUrC33Q" name="BIC"/>
+  </jndi:configuration>
+</jndi:namedResource>
