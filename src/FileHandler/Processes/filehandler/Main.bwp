@@ -836,8 +836,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    x="215"
-                                    xsi:type="notation:Bounds" y="33"/>
+                                    x="173"
+                                    xsi:type="notation:Bounds" y="9"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -877,8 +877,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
                                     <layoutConstraint
-                                    x="427"
-                                    xsi:type="notation:Bounds" y="33"/>
+                                    x="421"
+                                    xsi:type="notation:Bounds" y="9"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -894,7 +894,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     <layoutConstraint
-                                    height="145" width="823" xsi:type="notation:Bounds"/>
+                                    height="132" width="823" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -905,7 +905,7 @@
                                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
-                                    <layoutConstraint height="151"
+                                    <layoutConstraint height="115"
                                     width="874" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -916,7 +916,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity/@faultHandlers"/>
-                            <layoutConstraint height="177" width="884"
+                            <layoutConstraint height="141" width="884"
                                 x="22" xsi:type="notation:Bounds" y="357"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
@@ -927,7 +927,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="535" width="924" x="1"
+                    <layoutConstraint height="499" width="924" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -936,7 +936,7 @@
             </children>
             <styles fontName=".AppleSystemUIFont" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="587" width="1266" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="551" width="1266" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1267,7 +1267,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1686808031661&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FilePoller&quot;/>&lt;xsl:template name=&quot;EndLog-input&quot; match=&quot;/&quot;>&lt;tns1:Log>&lt;tns1:Type>&lt;xsl:value-of select=&quot;concat(&amp;quot;######  FILE PROCESSED SUCCESSFULLY : REMOVING THE FILE : &amp;quot;, $FilePoller/fileInfo/fileName,&amp;quot; FROM&amp;quot;)&quot;/>&lt;/tns1:Type>&lt;tns1:Data>&lt;xsl:value-of select=&quot;$FilePoller/fileInfo/location&quot;/>&lt;/tns1:Data>&lt;/tns1:Log>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1686808031661&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FilePoller&quot;/>&lt;xsl:template name=&quot;EndLog-input&quot; match=&quot;/&quot;>&lt;tns1:Log>&lt;tns1:Type>&lt;xsl:value-of select=&quot;concat(&amp;quot;######  SUCCESS : FILE PROCESSED.  REMOVING  FILE : &amp;quot;, $FilePoller/fileInfo/fileName,&amp;quot; FROM&amp;quot;)&quot;/>&lt;/tns1:Type>&lt;tns1:Data>&lt;xsl:value-of select=&quot;$FilePoller/fileInfo/location&quot;/>&lt;/tns1:Data>&lt;/tns1:Log>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="sharedLib"
                         subProcessName="Logger.consoleLogger" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>

@@ -146,15 +146,6 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//FileHandler//salesforce.wsdl</name>
-			<value>/SalesforceResources/partner_54_0.wsdl</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>//FileHandler///Controllers/isJiraUpdates</name>
 			<value>true</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -209,6 +200,43 @@
 			<type>String</type>
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//sharedLib///SharedResources/Salesforce/serverURL</name>
+			<value>https://login.salesforce.com/services/Soap/u/54.0</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//sharedLib///SharedResources/Salesforce/userName</name>
+			<value>joshinirmala.110@gmail.com</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//sharedLib///SharedResources/Salesforce/passWord</name>
+			<value>#!p1O6OjMHLzSP/6Nc6Eq9PetBi/yb5E2yRzTPoD3YxEjOlzQ3rytDnkRYPzDlrn4gINuBu0/XthRvh2pueKIB1VEfskoPJh2doqcpQwM7xvI=</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//FileHandler///DataOps/noOfRecords</name>
+			<value>5</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>true</isOverride>
+			<useLookupValue>false</useLookupValue>
+			<lookupValue>5</lookupValue>
 		</globalVariable>
 	</globalVariables>
 </repository>

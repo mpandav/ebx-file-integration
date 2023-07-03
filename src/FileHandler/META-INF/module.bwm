@@ -7,10 +7,10 @@
   <sca:property xmi:id="_NpEqsBl3Ee6NHrleUrC33Q" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_NpStIBl3Ee6NHrleUrC33Q" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_NpceIBl3Ee6NHrleUrC33Q" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_FnXcEBmNEe6NHrleUrC33Q" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_hYxvgBl3Ee6NHrleUrC33Q" name="/FileMetaData/fileLocation" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_VuaMkBmXEe6NHrleUrC33Q" name="/Controllers/isSFUpdates" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_ZtB-QBmXEe6NHrleUrC33Q" name="/Controllers/isJiraUpdates" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QKQaIBncEe6NHrleUrC33Q" name="/DataOps/noOfRecords" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_NjFXcBl3Ee6NHrleUrC33Q" name="ComponentMain" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NjFXcRl3Ee6NHrleUrC33Q" processName="filehandler.Main"/>
   </sca:component>

@@ -21,6 +21,7 @@
             <endingVariables>
                 <variable>ParseData-input</variable>
                 <variable>Start</variable>
+                <variable>noOfRecords</variable>
             </endingVariables>
         </task>
         <task name="StartLog">
@@ -686,6 +687,9 @@
         <bpws:variable element="ns4:Log" name="EndLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:SF_Data"
             name="CreateJiraRecords-input" sca-bpel:internal="true"/>
+        <bpws:variable name="noOfRecords" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/DataOps/noOfRecords" type="xsd:int"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -751,7 +755,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+cd44e7f9-890a-4de4-9797-9d61ad00996f+input&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1688384599483&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ParseData-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;text>&lt;xsl:value-of select=&quot;$Start/tns1:fileContents&quot;/>&lt;/text>&lt;startRecord>&lt;xsl:value-of select=&quot;2&quot;/>&lt;/startRecord>&lt;noOfRecords>&lt;xsl:value-of select=&quot;5&quot;/>&lt;/noOfRecords>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+cd44e7f9-890a-4de4-9797-9d61ad00996f+input&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1688384599483&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;noOfRecords&quot;/>&lt;xsl:template name=&quot;ParseData-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;text>&lt;xsl:value-of select=&quot;$Start/tns1:fileContents&quot;/>&lt;/text>&lt;startRecord>&lt;xsl:value-of select=&quot;2&quot;/>&lt;/startRecord>&lt;noOfRecords>&lt;xsl:value-of select=&quot;$noOfRecords&quot;/>&lt;/noOfRecords>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -786,7 +790,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1686808031661&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns1=&quot;http://www.example.com/namespaces/tns/1688384599483&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;StartLog-input&quot; match=&quot;/&quot;>&lt;tns2:Log>&lt;tns2:Type>&lt;xsl:value-of select=&quot;&amp;quot;######  UPDATE : RECORDS TO JIRA  &amp;quot;&quot;/>&lt;/tns2:Type>&lt;tns2:Data>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/tns2:Data>&lt;/tns2:Log>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1686808031661&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;noOfRecords&quot;/>&lt;xsl:template name=&quot;StartLog-input&quot; match=&quot;/&quot;>&lt;tns2:Log>&lt;tns2:Type>&lt;xsl:value-of select=&quot;&amp;quot;######  START  &amp;quot;&quot;/>&lt;/tns2:Type>&lt;tns2:Data>&lt;xsl:value-of select=&quot;concat(&amp;quot; UPDATING : &amp;quot;, xsd:string($noOfRecords), &amp;quot; RECORDS TO JIRA SYSTEM  &amp;quot;)&quot;/>&lt;/tns2:Data>&lt;/tns2:Log>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="sharedLib"
                         subProcessName="Logger.consoleLogger" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -805,7 +809,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1686808031661&quot; xmlns:dataformat=&quot;http://ns.tibco.com/bw/palette/dataformat/3b41dbaf-88eb-45c4-baa9-e05be0395db0&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseData&quot;/>&lt;xsl:template name=&quot;EndLog-input&quot; match=&quot;/&quot;>&lt;tns2:Log>&lt;tns2:Type>&lt;xsl:value-of select=&quot;&amp;quot;######  SUCCESS: Updated # Of Records To JIRA  &amp;quot;&quot;/>&lt;/tns2:Type>&lt;tns2:Data>&lt;xsl:value-of select=&quot;count($ParseData/Rows/dataformat:root)&quot;/>&lt;/tns2:Data>&lt;/tns2:Log>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.example.com/namespaces/tns/1686808031661&quot; xmlns:dataformat=&quot;http://ns.tibco.com/bw/palette/dataformat/3b41dbaf-88eb-45c4-baa9-e05be0395db0&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseData&quot;/>&lt;xsl:template name=&quot;EndLog-input&quot; match=&quot;/&quot;>&lt;tns2:Log>&lt;tns2:Type>&lt;xsl:value-of select=&quot;&amp;quot;######  SUCCESS &amp;quot;&quot;/>&lt;/tns2:Type>&lt;tns2:Data>&lt;xsl:value-of select=&quot;concat(&amp;quot;Updated &amp;quot;,  xsd:string(count($ParseData/Rows/dataformat:root)), &amp;quot; Records To JIRA SYSTEM &amp;quot; )&quot;/>&lt;/tns2:Data>&lt;/tns2:Log>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:CallProcess moduleRef="sharedLib"
                         subProcessName="Logger.consoleLogger" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
