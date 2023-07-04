@@ -1167,10 +1167,8 @@
                                     <type href="http://ns.tibco.com/bw/palette/file#//FilePoller"/>
                                     <value contentAs="text"
                                     createEvent="true"
-                                    deleteEvent="true"
                                     includeCurrent="true"
                                     mode="files-and-directories"
-                                    modifyEvent="true"
                                     pollInterval="5"
                                     sortby="File Name"
                                     sortorder="descending" xsi:type="file:FilePoller"/>
