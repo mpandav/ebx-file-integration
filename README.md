@@ -18,6 +18,16 @@ The Solution architecture depicts the working mechanism of the solution. How dat
 
 ![image](https://github.com/mpandav/ebx-file-integration/assets/38240734/d1bd8cf9-42ab-4856-8710-3b548b1b5a4f)
 
-## References
+## How to setup or run?
+- Download the repo to some directory /tmp/
+- Import the application into BusinessStudio
+- Check the Application properties and update them according your enviroment. Important App properties are as below:
+  - SharedLib Properties: contains shared resources config info (HTTP, Salesforce)- Update them accordingly.
+  - FileHandler App Module: contains properties:
+    - FileMetaData: FileName and location
+    - Controllers: These will controll the behavior of the Main process and decide which branch to execute; salesforce_update or jira_update or none.
+    - DataOps: It will decide how many records, needs to be read from file at once. Default value is 5.
+- Once corrected the App properties, your application is ready to run.
+- Go to Debug/Run configuraion > select all the processes > click Debug/Run
 
 ## Demo
