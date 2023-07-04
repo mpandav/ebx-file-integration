@@ -31,7 +31,7 @@ The Solution architecture depicts the working mechanism of the solution. How dat
 - Go to Debug/Run configuraion > select all the processes > click Debug/Run
 
 ## Demo
-Short demo video showing working on the solution.
+Short demo video showing working behvaior of the solution.
 
 https://github.com/mpandav/ebx-file-integration/assets/38240734/87165ffe-a69e-4976-8461-77b563995e77
 
